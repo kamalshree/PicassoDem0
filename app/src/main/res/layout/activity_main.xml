@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.android.picassodemo.MainActivity">
+
+
+        <ImageView
+            android:id="@+id/myImage_iv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/headerimage"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/sameImage_iv"
+            app:layout_constraintDimensionRatio="w,16:8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sameImage_iv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/headerimage"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/fitImage_iv"
+            app:layout_constraintDimensionRatio="w,16:8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myImage_iv" />
+
+        <ImageView
+            android:id="@+id/fitImage_iv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/headerimage"
+            app:layout_constraintBottom_toTopOf="@+id/stateImage_iv"
+            app:layout_constraintDimensionRatio="w,16:8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sameImage_iv" />
+
+        <ImageView
+            android:id="@+id/stateImage_iv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/headerimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,16:8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fitImage_iv" />
+
+        <ImageView
+            android:id="@+id/scaleImage_iv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/headerimage"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,16:8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fitImage_iv" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
